@@ -96,5 +96,5 @@ def get_video_item_info(_id, season, episode):
 
 
 if __name__ == '__main__':
-    print(get_video_info('32235'))
-    print(get_video_item_info('32235', 5, 1))
+    print(get_video_info(32235))
+    print(get_video_item_info(32235, 5, 1))
