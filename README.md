@@ -7,11 +7,15 @@
 
 > 一些自用的脚本.
 
-    +---Spider
-    |       douban.py
-    |       tvmaze.py
-    |       YYeTs.py
-    |
-    \---Tools
-            ImgUpload.py
-            wp_rest_api.py
+## Spider
+
+- [163Musci.py](https://github.com/Virace/Python/tree/master/Spider/163Musci.py) 网易云音乐歌单批量下载、搜索下载
+- [douban.py](https://github.com/Virace/Python/tree/master/Spider/douban.py) 豆瓣视频信息获取
+- [sohuTV.py](https://github.com/Virace/Python/tree/master/Spider/sohuTV.py) 搜狐视频下载
+- [tvmaze.py](https://github.com/Virace/Python/tree/master/Spider/tvmaze.py) tvmaze(美剧信息网站)提取
+- [YYeTs.py](https://github.com/Virace/Python/tree/master/Spider/YYeTs.py) 人人影视视频(美剧)信息爬取
+
+## Tools
+
+- [ImgUpload.py](https://github.com/Virace/Python/tree/master/Spider/ImgUpload.py) 图床图片上传 
+- [wp_rest_api.py](https://github.com/Virace/Python/tree/master/Spider/wp_rest_api.py) Wordpress rest api 简单操作(认证、获取文章、编辑文章)
