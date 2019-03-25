@@ -3,7 +3,7 @@
 # @Time    : 2019/3/25 18:35
 # @Author  : Virace
 # @Email   : Virace@aliyun.com
-# @File    : 163Musci.py
+# @File    : 163Music.py
 # @Software: PyCharm
 
 # 该接口只能下载 128kbs

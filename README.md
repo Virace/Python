@@ -9,7 +9,7 @@
 
 ## Spider
 
-- [163Musci.py](https://github.com/Virace/Python/tree/master/Spider/163Musci.py) 网易云音乐歌单批量下载、搜索下载
+- [163Music.py](https://github.com/Virace/Python/tree/master/Spider/163Music.py) 网易云音乐歌单批量下载、搜索下载
 - [douban.py](https://github.com/Virace/Python/tree/master/Spider/douban.py) 豆瓣视频信息获取
 - [sohuTV.py](https://github.com/Virace/Python/tree/master/Spider/sohuTV.py) 搜狐视频下载
 - [tvmaze.py](https://github.com/Virace/Python/tree/master/Spider/tvmaze.py) tvmaze(美剧信息网站)提取
