@@ -17,5 +17,6 @@
 
 ## Tools
 
-- [ImgUpload.py](https://github.com/Virace/Python/tree/master/Spider/ImgUpload.py) 图床图片上传 
-- [wp_rest_api.py](https://github.com/Virace/Python/tree/master/Spider/wp_rest_api.py) Wordpress rest api 简单操作(认证、获取文章、编辑文章)
+- [ImgUpload.py](https://github.com/Virace/Python/tree/master/Tools/ImgUpload.py) 图床图片上传 
+- [lanzou.py](https://github.com/Virace/Python/tree/master/Tools/lanzou.py) 蓝奏云操作，登录上传
+- [wp_rest_api.py](https://github.com/Virace/Python/tree/master/Tools/wp_rest_api.py) Wordpress rest api 简单操作(认证、获取文章、编辑文章)
