@@ -30,6 +30,8 @@ def data_to_qrcode_png(data, file, version=None, box_size=10, border=4):
     qr.make(fit=True)
 
     # make_image这个位置可以设置二维码颜色，以及背景色
+    # 这里如果需要后续修改图片建议 转为RGBA 如果不修改默认为1 二值图像
+    # 如果make_image 修改背景或二维码颜色 就不用转换，也就是可以去掉convert函数
     qr.make_image().convert("RGBA").save(file)
 
 
