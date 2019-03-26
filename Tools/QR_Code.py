@@ -16,16 +16,21 @@ from PIL import Image
 from pyzbar import pyzbar
 
 
-def data_to_qrcode_png(data, file):
+def data_to_qrcode_png(data, file, version=None, box_size=10, border=4):
     # 实例化二维码生成类， border边框大小
-    qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_L, border=1)
+    qr = qrcode.QRCode(
+        error_correction=qrcode.constants.ERROR_CORRECT_L,
+        version=version,
+        box_size=box_size,
+        border=border
+    )
     # 设置二维码数据
     qr.add_data(data=data)
 
     qr.make(fit=True)
 
     # make_image这个位置可以设置二维码颜色，以及背景色
-    qr.make_image().save(file)
+    qr.make_image().convert("RGBA").save(file)
 
 
 def qrcode_to_data(filename):
@@ -36,10 +41,12 @@ def qrcode_to_data(filename):
     :param filename:
     :return:
     """
+    img = Image.open(filename)
     # 先用pyzbar包解析，如果解析不成功则用zxing模块解析
-    data = pyzbar.decode(Image.open(filename), symbols=[pyzbar.ZBarSymbol.QRCODE])
-    if not data:
-        img = Image.open(filename)
+    data = pyzbar.decode(img, symbols=[pyzbar.ZBarSymbol.QRCODE])
+    if data:
+        return data[0].data.decode('utf-8')
+    else:
         ran = int(random.random() * 100000)
         img.save('%s%s.png' % (os.path.basename(filename).split('.')[0], ran))
         zx = zxing.BarCodeReader()
