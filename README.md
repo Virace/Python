@@ -20,4 +20,5 @@
 - [ImgUpload.py](https://github.com/Virace/Python/tree/master/Tools/ImgUpload.py) 图床图片上传 
 - [lanzou.py](https://github.com/Virace/Python/tree/master/Tools/lanzou.py) 蓝奏云操作，登录上传
 - [QR_Code.py](https://github.com/Virace/Python/tree/master/Tools/QR_Code.py) 二维码操作
+- [Watermark.py](https://github.com/Virace/Python/tree/master/Tools/Watermark.py) 图片操作：为图片增加图片水印
 - [wp_rest_api.py](https://github.com/Virace/Python/tree/master/Tools/wp_rest_api.py) Wordpress rest api 简单操作(认证、获取文章、编辑文章)
