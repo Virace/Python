@@ -8,10 +8,12 @@
 
 import qrcode
 import zxing
+
 import random
 import os
 
 from PIL import Image
+from pyzbar import pyzbar
 
 
 def data_to_qrcode_png(data, file):
@@ -34,18 +36,21 @@ def qrcode_to_data(filename):
     :param filename:
     :return:
     """
-    img = Image.open(filename)
-    ran = int(random.random() * 100000)
-    img.save('%s%s.png' % (os.path.basename(filename).split('.')[0], ran))
-    zx = zxing.BarCodeReader()
+    # 先用pyzbar包解析，如果解析不成功则用zxing模块解析
+    data = pyzbar.decode(Image.open(filename), symbols=[pyzbar.ZBarSymbol.QRCODE])
+    if not data:
+        img = Image.open(filename)
+        ran = int(random.random() * 100000)
+        img.save('%s%s.png' % (os.path.basename(filename).split('.')[0], ran))
+        zx = zxing.BarCodeReader()
 
-    zxdata = zx.decode('%s%s.png' % (os.path.basename(filename).split('.')[0], ran))
-    # 删除临时文件
-    os.remove('%s%s.png' % (os.path.basename(filename).split('.')[0], ran))
-    if zxdata:
-        return zxdata.parsed
-    else:
-        img.save('%s-zxing.png' % filename)
+        zxdata = zx.decode('%s%s.png' % (os.path.basename(filename).split('.')[0], ran))
+        # 删除临时文件
+        os.remove('%s%s.png' % (os.path.basename(filename).split('.')[0], ran))
+        if zxdata:
+            return zxdata.parsed
+        else:
+            img.save('%s-zxing.png' % filename)
 
 
 if __name__ == '__main__':
