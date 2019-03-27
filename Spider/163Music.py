@@ -76,5 +76,12 @@ def search_music(name):
         return result
 
 
+def other_api():
+    # https://music.163.com/weapi/v1/
+    # 知乎：https://www.zhihu.com/question/36081767
+
+    pass
+
+
 if __name__ == '__main__':
     pass
