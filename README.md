@@ -17,6 +17,7 @@
 
 ## Tools
 
+- [adb.py](https://github.com/Virace/Python/tree/master/Tools/adb.py) adb 安卓模拟操作
 - [ImgUpload.py](https://github.com/Virace/Python/tree/master/Tools/ImgUpload.py) 图床图片上传 
 - [lanzou.py](https://github.com/Virace/Python/tree/master/Tools/lanzou.py) 蓝奏云操作，登录上传
 - [QR_Code.py](https://github.com/Virace/Python/tree/master/Tools/QR_Code.py) 二维码操作
